@@ -46,9 +46,9 @@ function login() {
 			"login": "'$1'",
 			"password": "'$2'"
 		}')
-	if [ -n $(jq -r ".data.token" <<<"$response") ]; then
-		user_id=$(jq -r ".data.id" <<<"$response")
-		access_token=$(jq -r ".data.token" <<<"$response")
+	if [ -n $(jq -r ".data.token" <<< "$response") ]; then
+		user_id=$(jq -r ".data.id" <<< "$response")
+		access_token=$(jq -r ".data.token" <<< "$response")
 	fi
 	echo $response
 }
