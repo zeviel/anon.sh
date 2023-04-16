@@ -3,7 +3,6 @@ Mobile-API for [anon](https://play.google.com/store/apps/details?id=network.anon
 
 ## Example
 ```bash
-source anon.sh
-
+source ./anon.sh
 login "email" "password"
 ```
